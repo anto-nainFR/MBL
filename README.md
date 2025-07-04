@@ -16,7 +16,8 @@ The aim is to determine the **blue line** of a marathon course, i.e. **the short
 
 ### 4. Utils
 
-1. read_gpx : function that read a gpx file and return a list of coordinates
+1. `read_gpx`: function that reads a GPX file and returns a list of coordinates
+2. `plot_gpx`: function that displays a route from two GPX files
 
 ## Installation and running
 
