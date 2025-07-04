@@ -14,6 +14,10 @@ The aim is to determine the **blue line** of a marathon course, i.e. **the short
 
 ### 3. Project structure
 
+### 4. Utils
+
+1. read_gpx : function that read a gpx file and return a list of coordinates
+
 ## Installation and running
 
 ### Requierements
