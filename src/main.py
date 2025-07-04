@@ -2,6 +2,11 @@ import sys
 
 from utils.read_gpx import read_gpx
 from utils.plot_gpx import plot_gpx
+from utils.plot_modelisation import plot_modelisation
+
+from modelisation.grid import create_grid
+
+
 
 def print_coordinates(coordinates):
     """
@@ -23,6 +28,15 @@ def main(left_file:str, right_file:str):
     print_coordinates(right_coordinates)
 
     plot_gpx(left_coordinates, right_coordinates)
+
+    # Here you would call the grid creation function if needed
+    grid_points = create_grid(left_coordinates, right_coordinates, grid_density=100)
+    print("\nGrid Points:")
+    print_coordinates(grid_points)
+
+    # Plot the grid points on the GPX routes
+    plot_modelisation(left_coordinates, right_coordinates, grid_points)
+    
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
